@@ -21,7 +21,7 @@ tabsArray.forEach((ele) => {
 
 
 
-const api = "https://raw.githubusercontent.com/leartutor/jsontest/main/Courses.json"
+const api = "https://leartutor.github.io/jsontest/"
 async function getData() {
     const response = await fetch(api)
     const data = await response.json()
