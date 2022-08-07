@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="هنا تجد الكورسات المجانية من مختلف المنصات والمواقع مجمعة في مكان واحد من أجل مساعدتك على التعلم" />
+
+    <title>تسويق إلكتروني</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HKPGLEHGM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3HKPGLEHGM');
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg bg-dark" dir="rtl">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html">
+                <h1>Courses by LearTutor</h1>
+            </a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3 text-warning" aria-current="page" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3 text-warning" aria-current="page" href="#section1">الأقسام </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3 text-warning" aria-current="page" href="#Categories"> الفلاتر</a>
+                    </li>
+
+                </ul>
+
+                <button type="button" class="btn" position-relative>
+                    <a href="https://t.me/leartutorar" target="_blank"><i class="bi bi-telegram"
+                            style="font-size: 1.5rem;"></i></a>
+                </button>
+                <button type="button" class="btn" position-relative>
+                    <a href="https://twitter.com/LearTutor_AR" target="_blank"><i class="bi bi-twitter "
+                            style="font-size: 1.5rem;"></i></a>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+    <!--End of Navbar-->
+
+    <div id="innnerpageh">
+        <h2> تسويق إلكتروني </h2>
+    </div>
+
+    <div class="container">
+        <div class="marketing  row col row-cols-lg-4" id="marketin">
+
+            <script>
+                const api = "/Courses.json"
+                async function getData() {
+                    const response = await fetch(api)
+                    const data = await response.json()
+                    printdata4(data)
+                }
+                function printdata4(data) {
+                    const marketing = document.querySelector("#marketin")
+                    for (let i = 0; i < data.length; i++) {
+                        if (data[i].category.trim() !== "تسويق إلكتروني") {
+                            continue;
+                        }
+                        marketing.innerHTML += `<div class="col">
+    <div class="card h-100">
+        <img class="img-fluid" src="${data[i].thumbnailurl}" class="card-img-top"
+            alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${data[i].title}</h5>
+            <p><strong>by</strong> <span class="badge text-bg-success"> ${data[i].provider}</span></p>
+            <span class="badge text-bg-danger">${data[i].platform}</span>
+            <a class="btn btn-outline-success" href="${data[i].curl}" target="_blank"> عرض الكورس
+            </a>
+        </div>
+    </div>
+</div>`
+
+                    }
+
+
+                }
+                getData()
+            </script>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container pt-3 pb-3">
+        <a class="btn btn-outline-primary" href="index.html">
+            <h2>عودة إلى الصفحة الرئيسية</h2>
+        </a>
+    </div>
+
+
+
+
+
+    <!-- footer-->
+
+    <div class="footer pt-5 pb-5 text-white-50 text-center text-md-end bg-dark" dir="rtl">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <div class="info mb-5">
+                        <a class="navbar-brand text-warning mb-4" href="index.html"> Courses by LearTutor </a>
+                        <p class="mb-5 text-light">
+                            الكورسات المجانية تجدها هنا في مكان واحد شارك الموقع ليستفيد الجميع
+                        </p>
+                        <div class="copyright text-light">
+                            بواسطة <span class="twl"><a href="https://twitter.com/LeartutorF">LearTutor</a></span>
+                            <div class="text-light"> &copy; 2022 </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-6">
+                    <div class="links">
+                        <ul class="list-unstyled lh-lg text-light fo ">
+                            <li><a href="#section1">الأقسام</a></li>
+                            <li><a href="#Categories">الفلاتر</a></li>
+
+                        </ul>
+
+                        <ul class="d-flex mt-5 list-unstyled gap-3 mo">
+                            <li><a href="https://t.me/leartutorar" target="_blank"><i class="bi bi-telegram text-light"
+                                        style="font-size: 1.5rem;"></i></a></li>
+                            <li><a href="https://twitter.com/LearTutor_AR" target="_blank"><i
+                                        class="bi bi-twitter text-light" style="font-size: 1.5rem;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--  efooter-->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
